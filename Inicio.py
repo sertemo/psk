@@ -396,14 +396,18 @@ def autenticarse(gestor_db:db.UserDBHandler, gestor_mail:em.EmailManager) -> Non
             st.info("Se enviará un email con una nueva contraseña al email del usuario")
             recuperar = st.form_submit_button("Reestablecer contraseña")
             if recuperar:
+                ## El usuario no puede estar vacío
+                if not user:
+                    st.error("El usuario no puede estar vacío.")
+                    st.stop()
                 ## Verificamos que el user exista
                 if not val.existe_usuario(user, gestor_db):
                     st.error("Introduce un usuario válido.")
-                    logging.INFO(f"{user} recupera contraseña con usuario no válido.")
+                    logging.info(f"Intento de recuperación de contraseña con usuario no válido {user}.")
                     st.stop()
                 
                 with st.spinner("Restableciendo contraseña..."):
-                    logging.INFO(f"Restableciendo contraseña para {user}.")
+                    logging.info(f"Restableciendo contraseña para {user}.")
                     ## Generar una contraseña nueva que cumpla el criterio establecido
                     nueva_pass = val.crear_contraseña_valida()
                     ## Reemplazar en db la contraseña hasheada
