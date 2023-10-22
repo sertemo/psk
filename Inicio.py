@@ -674,7 +674,7 @@ def distribuir(nombre_usuario:str) -> None:
                 guardar_api_key = st.button("Guardar API key", help="⚠️ Guardar la api key puede no ser seguro.")
                 if guardar_api_key:
                     ## Encriptamos la api key sacando llave y valor encriptado
-                    gmail_key_encriptada, key = db.encriptar_fernet(gmail_key)    
+                    gmail_key_encriptada, key = val.encriptar_fernet(gmail_key)    
                     try:
                         ## Metemos en mongodb el objeto llave
                         gestor_mongo_apikey.insert(

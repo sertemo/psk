@@ -1,4 +1,5 @@
 # PSK Mailing v 1.0
+- Enlace a la [app](https://https://talsa-mailing.streamlit.app/)
 - Aplicación pensada para los comerciales de Talsa
 - Aplicación para hacer mailing a leads o clientes
 - Posibilidad de gestionar y personalizar plantillas HTML para los mails
