@@ -1,0 +1,4 @@
+.env
+tests.ipynb
+backend/_sqlite_init.py
+.coverage
