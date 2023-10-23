@@ -387,7 +387,7 @@ def print_final_de_bucle(start:time, filas_excel:int, idx_to_delete:list[int]) -
 
 
 def autenticarse(gestor_db:db.UserDBHandler, gestor_mail:em.EmailManager) -> None:
-    texto("~ Autenticarse ~", color='#c54933', formato='b', font_size=40)
+    texto("Autenticarse", color='#c54933', formato='b', font_size=40)
     texto("Autentícate para iniciar sesión", formato='i')
     
     with st.form("identificarse",clear_on_submit=False):
@@ -489,7 +489,7 @@ def autenticarse(gestor_db:db.UserDBHandler, gestor_mail:em.EmailManager) -> Non
    
 
 def registrarse(gestor_db:db.UserDBHandler, gestor_email_admin:em.EmailManager) -> None:
-    texto("~ Registrarse ~", color='#c54933', formato='b', font_size=40)
+    texto("Registrarse", color='#c54933', formato='b', font_size=40)
     texto("Regístrate para poder enviar emails en tu nombre", formato='i')
     
     with st.form("identificarse",clear_on_submit=False):
@@ -569,7 +569,7 @@ def registrarse(gestor_db:db.UserDBHandler, gestor_email_admin:em.EmailManager) 
 
 
 def distribuir(nombre_usuario:str) -> None:
-    texto("~ Distribuir ~", color='#c54933', formato='b', font_size=40)
+    texto("Distribuir", color='#c54933', formato='b', font_size=40)
     texto("Carga un archivo excel y envía decenas de mails en segundos")
 
     añadir_salto()
@@ -1101,7 +1101,7 @@ def personalizar(
         gestor_db_plantilla_prosp:db.TemplateDBHandler,
         gestor_db_plantilla_react:db.TemplateDBHandler,
         )-> None:
-    texto("~ Personalizar ~", color='#c54933', formato='b', font_size=40)
+    texto("Personalizar", color='#c54933', formato='b', font_size=40)
     texto("1. Modifica los datos de tu <b>cuenta</b>", font_size=35)
     añadir_salto()
 
@@ -1470,7 +1470,7 @@ def personalizar(
     
 
 def visualizar() -> None:
-    texto("~ Visualizar ~", color='#c54933', formato='b', font_size=40)
+    texto("Visualizar", color='#c54933', formato='b', font_size=40)
     texto("🚧 Apartado en construcción", color='#f0c50d', formato='b', font_size=50)
     ## TODO Visualizar datos por comercial por ejemplo
 
