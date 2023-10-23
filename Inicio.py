@@ -87,11 +87,14 @@ def get_decrypted_api_key(
         gestor_mongo_apikey:db.DBHandler, 
         gestor_sqlite_apikey:db.SQLContext) -> str:
     ## Hacemos búsqueda
-    if (objeto_key:=gestor_mongo_apikey.find_one_field('usuario', nombre_usuario, 'objeto_key')) and \
-    (apikey:=gestor_sqlite_apikey.find_one_field(campo_buscado='usuario', valor_buscado=nombre_usuario, campo_a_retornar='apikey')):
-        return val.desencriptar_fernet(key=objeto_key, cipher_text=apikey)
-    
-    return ""
+    try:
+        if (objeto_key:=gestor_mongo_apikey.find_one_field('usuario', nombre_usuario, 'objeto_key')) and \
+        (apikey:=gestor_sqlite_apikey.find_one_field(campo_buscado='usuario', valor_buscado=nombre_usuario, campo_a_retornar='apikey')):
+            return val.desencriptar_fernet(key=objeto_key, cipher_text=apikey)
+        else:
+            return ""
+    except Exception as exc:
+        st.error(f"Algo ha fallado al intentar recuperar tu API Key: {exc}")   
 
 
 def get_variables_para_plantilla() -> set:
@@ -749,7 +752,7 @@ def distribuir(nombre_usuario:str) -> None:
                 ic(archivos_adjuntos) #! DEBUG
                 ## Inicializamos el gestor sql
                 gestor_sql_client_done = db.SQLContext(nombre_tabla='client_done', db_filename='backend/db/stats.db')
-                with st.status("Log del proceso"): ##TODO usar framework logging en archivo ?
+                with st.status("Log del proceso"):
                     ## Sacamos las filas totales del excel antes de manipular ya que las eliminamos al final.
                     filas_excel = len(excel_dl)
                     ## Creamos lista de indices a borrar (estos índices serán los que SI se han podido mandar. Instancia de la clase con Lock)

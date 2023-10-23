@@ -11,6 +11,8 @@ import sqlite3
 from sqlite3 import Cursor
 from pymongo import MongoClient
 
+from icecream import ic
+
 from cryptography.fernet import Fernet
 
 load_dotenv()
@@ -97,8 +99,11 @@ class SQLContext:
         """
         with SQLManager(self.db_filename) as c:
             consulta = f"SELECT {campo_a_retornar} FROM {self.tabla} WHERE {campo_buscado} = ?"
-            results = c.execute(consulta, (valor_buscado,))
-            return results.fetchone()[0]
+            results = c.execute(consulta, (valor_buscado,))            
+            if (output:=results.fetchone()) is not None:
+                return output[0]
+            else:
+                return output
     
     @classmethod
     def create_table(cls, *, db_filename:str, nombre_tabla:str, columnas:tuple[str]) -> None:
