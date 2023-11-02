@@ -791,7 +791,7 @@ def distribuir(nombre_usuario:str) -> None:
                             comercial_emisor = gestor_sql_client_done.find_one_field(campo_buscado='email', valor_buscado=receiver, campo_a_retornar='comercial')
                             texto_error(f">> Ya se ha enviado email a la dirección: {receiver} con fecha {fecha_existente} por {comercial_emisor}. Pasando al siguiente.")
                             ## Modificamos celda del mail con motivo del rechazo
-                            row["email"] = receiver + ' (ya enviado)'
+                            excel_dl.modify_row(idx, "email", f"{receiver} ya enviado")
                             if idx == filas_excel - 1:
                                 print_final_de_bucle(start, filas_excel, idx_to_delete)
                                 break
