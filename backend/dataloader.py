@@ -10,6 +10,7 @@ class ExcelDataLoader(Sequence):
     def __init__(self, excel_uploaded_file):
         self._data = pd.read_excel(BytesIO(excel_uploaded_file.read()), engine='openpyxl')
         self._fillna()
+        self._lower_clean_headers()
 
     def __len__(self):
         return len(self._data)
@@ -27,6 +28,11 @@ class ExcelDataLoader(Sequence):
 
     def _fillna(self):
         self._data.fillna(value=np.nan, inplace=True)
+
+    def _lower_clean_headers(self) -> None:
+        """limpiamos las columnas y pasamos a minúsculas automáticamente
+        """
+        self._data.columns = self._data.columns.str.strip().str.lower()
 
     def remove_rows(self, idx_list:list):
         """Elimina las filas proporcionadas de la lista
