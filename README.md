@@ -14,7 +14,7 @@
 - Sigue las indicaciones de los apartados
 
 ## Mejoras a futuro
-- Sería interesante automatizar con IA la creación del excel
+- 02/11/2023 Estoy trabajando en la aplicación **Profile Hunter** para hacer el excel de leads de forma automática.
 
 
 
