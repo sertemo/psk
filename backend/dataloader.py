@@ -7,11 +7,12 @@ import io
 # DataLoader
 class ExcelDataLoader(Sequence):
     def __init__(self, excel_uploaded_file, columns_to_lower:list[str]=["idioma"]) -> None: # Hardcoded columna idioma
-        self._data = pd.read_excel(BytesIO(excel_uploaded_file.read()), engine='openpyxl')
+        self._data = pd.read_excel(BytesIO(excel_uploaded_file.read()), engine='openpyxl', dtype=str)
         self._fillna()
         self._lower_clean_headers()
-        self._strip_all_data()
+        self._strip_all_data()        
         self._lower_columns(columns_to_lower)
+        #print(self._data.dtypes)
 
     def __len__(self):
         return len(self._data)
@@ -28,7 +29,9 @@ class ExcelDataLoader(Sequence):
         return set(self.df.columns)
 
     def _fillna(self):
-        self._data.fillna(value=np.nan, inplace=True)
+        """Rellena los espacios vacíos con un string vacío
+        """
+        self._data.fillna(value="", inplace=True)
 
     def _lower_clean_headers(self) -> None:
         """Quita espacios en blanco de los headers y pasa a minúsculas
@@ -36,9 +39,11 @@ class ExcelDataLoader(Sequence):
         self._data.columns = self._data.columns.str.strip().str.lower()
 
     def _strip_all_data(self) -> None:
-        """Quita los espacios en blanco de todos los campos
+        """Convierte a objeto y
+        Quita los espacios en blanco de todos los campos
         """
         for col in self._data.columns:
+            # Limpiamos espacios
             self._data[col] = self._data[col].str.strip()
 
     def _lower_columns(self, columns:list[str]) -> None:

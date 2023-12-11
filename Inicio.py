@@ -54,6 +54,7 @@ COLUMNAS_EXCEL:set = {
     'sector',
     'web',
     'empresa',
+    'pais',
 }
 LOG_FOLDER = Path('logs')
 
@@ -67,7 +68,7 @@ configuracion_plantilla = {
 
 ## Configuración de la app
 st.set_page_config(
-    page_title=f"pSK mailing {version_app} ~BETA~",
+    page_title=f"pSK mailing {version_app}·BETA",
     page_icon="📮",
     layout="wide",
     initial_sidebar_state="auto",
@@ -486,7 +487,7 @@ def autenticarse(gestor_db:db.UserDBHandler, gestor_mail:em.EmailManager) -> Non
                 logging.info(f"Intento de autenticación de {user}. Campos vacíos.")
 
     texto("¿No estás registrado? Ve al apartado <b>Registrarse</b>", font_size=15)
-   
+
 
 def registrarse(gestor_db:db.UserDBHandler, gestor_email_admin:em.EmailManager) -> None:
     texto("Registrarse", color='#c54933', formato='b', font_size=40)
@@ -591,8 +592,8 @@ def distribuir(nombre_usuario:str) -> None:
             excel_dl = dl.ExcelDataLoader(uploaded_file)
             
         except Exception as exc:
-            st.error("Se ha producido un error al cargar el archivo. Inténtalo más tarde o cambia de archivo.")
-            logging.error(f"Se ha producido un error al cargar el excel para {nombre_usuario}.")
+            st.error(f"Se ha producido un error al cargar el archivo. Inténtalo más tarde o cambia de archivo.\nError: {exc}")
+            logging.error(f"Se ha producido un error al cargar el excel para {nombre_usuario}. Error: {exc}")
             st.stop()
 
         ## Validaciones del DataFrame
@@ -635,7 +636,7 @@ def distribuir(nombre_usuario:str) -> None:
                     logging.info(f"Error en nombres de emails de excel para sesión {nombre_usuario}: {', '.join(set_mails_error)}.")
                     st.stop()
 
-                     
+
             st.session_state["excel_cargado"] = True ## Para no repetir el mensaje de success
             st.success("Datos cargados correctamente.")
             logging.info(f"El excel se ha cargado correctamente para la sesión {nombre_usuario}")
@@ -656,13 +657,13 @@ def distribuir(nombre_usuario:str) -> None:
         añadir_salto()
         texto(f"Escribe la API Key de Gmail para la cuenta <b>{get_email_comercial_sesion()}</b>.")
         gmail_key = st.text_input("Para poder enviar emails en tu nombre es necesario tener una API Key de Gmail",
-                                  type='password',
-                                  help="""
-                                  Pasos:\n
-                                  1- Ve a los parámetros de tu cuenta Gmail\n
-                                  2- Activa la verificación en 2 pasos\n
-                                  3- Busca con la lupa 'Crear contraseña de aplicación'\n
-                                  4- Sigue las indicaciones y copia tu API Key en lugar seguro
+                                type='password',
+                                help="""
+                                Pasos:\n
+                                1- Ve a los parámetros de tu cuenta Gmail\n
+                                2- Activa la verificación en 2 pasos\n
+                                3- Busca con la lupa 'Crear contraseña de aplicación'\n
+                                4- Sigue las indicaciones y copia tu API Key en lugar seguro
                                     """,
                                     value=get_decrypted_api_key(
                                         nombre_usuario,
@@ -741,7 +742,7 @@ def distribuir(nombre_usuario:str) -> None:
                     st.success("✅ Disponible plantilla en {}.".format(IDIOMAP[language]))
                 else:
                     st.error("⛔ No dispones de plantilla en {}. Ve al apartado **Personalizar** para cargar una.\
-                              Los clientes que requieran traducción al {} serán ignorados.".format(IDIOMAP[language]))
+                            Los clientes que requieran traducción al {} serán ignorados.".format(IDIOMAP[language]))
                     
             ## Cargar un archivo adjunto
             texto("Escoge los archivos pdf a adjuntar")
@@ -764,13 +765,13 @@ def distribuir(nombre_usuario:str) -> None:
                     for idx, row in enumerate(excel_dl):
                         ## cargamos inputs del excel
                         receiver = row["email"]
-                        nombre_receptor = "" if (name:=row["receptor"]) is np.nan else name
+                        nombre_receptor = row["receptor"]
                         sector = row["sector"]
-                        idioma = 'es' if row["idioma"] is np.nan else row["idioma"] ## ponemos español por defecto si el idioma está vacío.
+                        idioma = 'es' if not row["idioma"] else row["idioma"] ## ponemos español por defecto si el idioma está vacío.
 
-                        texto_descriptivo(f"> Destinatario <b>{idx + 1}/{filas_excel}: {'~vacío~' if receiver is np.nan else receiver} en {IDIOMAP[idioma]}<b>")
+                        texto_descriptivo(f"> Destinatario <b>{idx + 1}/{filas_excel}: {'~vacío~' if not receiver else receiver} en {IDIOMAP[idioma]}<b>")
                         ## Si no hay email o sector pasamos al siguiente
-                        if (receiver is np.nan) or (sector is np.nan):
+                        if (not receiver) or (not sector):
                             texto_error(f">> Los campos del <b>mail o sector</b> están vacíos. Pasando al siguiente.")
                             if idx == filas_excel - 1:
                                 print_final_de_bucle(start, filas_excel, idx_to_delete)

@@ -1,0 +1,128 @@
+15:41:38:INFO:Seleción menú Autenticarse. Usuario en sesión: .
+15:46:44:INFO:Autenticación CORRECTA de sertemo.
+15:46:50:INFO:Seleción menú Autenticarse. Usuario en sesión: Sergio Tejedor.
+15:47:22:INFO:Descargado LOG:'2023-12-11' por parte del admin sertemo:Sergio Tejedor
+15:47:22:INFO:Seleción menú Autenticarse. Usuario en sesión: Sergio Tejedor.
+15:47:30:INFO:Descargado LOG:'2023-12-11' por parte del admin sertemo:Sergio Tejedor
+15:47:30:INFO:Seleción menú Autenticarse. Usuario en sesión: Sergio Tejedor.
+15:47:42:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:47:51:INFO:El excel se ha cargado correctamente para la sesión sertemo
+15:47:51:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+15:47:53:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:48:26:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+15:48:27:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:48:35:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+15:48:37:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:48:55:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+15:48:55:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:52:24:INFO:Seleción menú Autenticarse. Usuario en sesión: .
+15:52:33:INFO:Autenticación CORRECTA de sertemo.
+15:52:35:INFO:Seleción menú Autenticarse. Usuario en sesión: Sergio Tejedor.
+15:52:39:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:52:47:ERROR:Se ha producido un error al cargar el excel para sertemo.
+15:54:41:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:54:46:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:54:56:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:56:57:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:57:02:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:57:04:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:57:20:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:59:26:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:59:28:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:59:32:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+15:59:41:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+15:59:52:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:02:23:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:02:32:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:02:58:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:03:00:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:03:02:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:03:08:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:04:00:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:04:04:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:04:20:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:04:23:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:04:28:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:05:12:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:05:16:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:05:18:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:05:24:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:05:36:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:05:40:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:05:59:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:06:07:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:07:37:INFO:Seleción menú Autenticarse. Usuario en sesión: .
+16:07:55:INFO:Autenticación CORRECTA de sertemo.
+16:07:57:INFO:Seleción menú Autenticarse. Usuario en sesión: Sergio Tejedor.
+16:08:02:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:08:22:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:09:34:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:10:05:ERROR:Se ha producido un error al cargar el excel para sertemo. Error: Can only use .str accessor with string values!
+16:10:30:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:10:43:INFO:El excel se ha cargado correctamente para la sesión sertemo
+16:10:43:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:10:43:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:11:00:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:11:00:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:12:58:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:12:59:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:15:23:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:15:23:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:15:26:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:15:35:INFO:Error en nombres de sectores de excel para sesión sertemo: .
+16:17:30:INFO:El excel se ha cargado correctamente para la sesión sertemo
+16:17:30:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:17:30:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:17:35:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:17:36:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:17:38:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:17:46:INFO:El excel se ha cargado correctamente para la sesión sertemo
+16:17:46:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:17:47:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:17:49:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:17:49:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:18:06:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:18:11:INFO:Error en columnas de excel para sesión sertemo: pais.
+16:18:43:INFO:Error en nombres de emails de excel para sesión sertemo: info@agro4pro.com ben@agro4pro.com DrBNadel@agro4pro.com, 605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com info@plast-sheets.com, info@metalmak.com info@seraymak.com, info@proehl-gmbh.de info@nitsch-gartenbautechnik.de, info@seraymak.com info@metalmak.com, DrBNadel@agro4pro.com ben@agro4pro.com info@agro4pro.com, address@example.com someone@example.com, marketing@rishifibc.com mail@rishifibc.com, mail@rishifibc.com marketing@rishifibc.com, info@rabensteiner.eu info@pec.rabensteiner.eu, direction@paf.com.tn commercial@paf.com.tn.
+16:20:09:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:20:29:INFO:El excel se ha cargado correctamente para la sesión sertemo
+16:20:29:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:20:29:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:20:43:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:20:43:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:13:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:14:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:15:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:16:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:22:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:29:INFO:El excel se ha cargado correctamente para la sesión sertemo
+16:23:29:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:29:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:37:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:37:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:41:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:41:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:23:55:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:23:55:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:24:07:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:24:07:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:24:11:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:24:12:INFO:Final de Distribución para sesión. Se han procesado 0 filas de 4. Tiempo total: 0 min 0 s
+16:24:12:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:27:05:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:27:20:INFO:Final de Distribución para sesión. Se han procesado 1 filas de 4. Tiempo total: 0 min 14 s
+16:27:20:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:27:30:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:27:31:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:28:25:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:28:27:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:28:28:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:28:45:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:28:46:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:28:48:INFO:Descanso establecido para la sesión de sertemo de 10 segundos.
+16:28:48:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:28:57:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:29:04:INFO:Error en nombres de emails de excel para sesión sertemo: info@agro4pro.com ben@agro4pro.com DrBNadel@agro4pro.com, 605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com info@plast-sheets.com, info@metalmak.com info@seraymak.com, info@proehl-gmbh.de info@nitsch-gartenbautechnik.de, info@seraymak.com info@metalmak.com, DrBNadel@agro4pro.com ben@agro4pro.com info@agro4pro.com, address@example.com someone@example.com, marketing@rishifibc.com mail@rishifibc.com, mail@rishifibc.com marketing@rishifibc.com, info@rabensteiner.eu info@pec.rabensteiner.eu, direction@paf.com.tn commercial@paf.com.tn.
+16:29:10:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.
+16:29:39:INFO:Error en nombres de sectores de excel para sesión sertemo: canales drenaje.
+16:29:52:INFO:Seleción menú Distribuir. Usuario en sesión: Sergio Tejedor.

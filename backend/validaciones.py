@@ -108,7 +108,7 @@ def validar_sectores_excel(sectores_guardados:list, excel_dl:dl.ExcelDataLoader)
     set
         _description_
     """
-    sectores_excel = set(sector for sector in excel_dl.df["sector"] if sector is not np.nan) ## Quitamos los nan para que no den problemas
+    sectores_excel = set(sector for sector in excel_dl.df["sector"] if sector) ## Quitamos los nan para que no den problemas
     #print(sectores_excel)
     diferencia = sectores_excel.difference(sectores_guardados)
     return diferencia
@@ -129,7 +129,7 @@ def validar_idiomas_excel(idiomas_admisibles:set, excel_dl:dl.ExcelDataLoader) -
     set
         _description_
     """
-    idiomas_excel = set(idioma for idioma in excel_dl.df["idioma"] if idioma is not np.nan) # Quitamos los nan para que no den problemas
+    idiomas_excel = set(idioma for idioma in excel_dl.df["idioma"] if idioma) # Quitamos los nan para que no den problemas
     #print(idiomas_excel)
     diferencia = idiomas_excel.difference(idiomas_admisibles)
     return diferencia
@@ -151,7 +151,7 @@ def validar_emails_excel(excel_dl:dl.ExcelDataLoader) -> set[str]:
     emails_set = set(excel_dl.df["email"])
     emails_fail = set()
     for mail in emails_set:
-        if (type(mail) == str) and (mail is not np.nan):
+        if (type(mail) == str) and (mail):
             if not email_valido(mail):
                 emails_fail.add(mail)
     #print(f"{emails_set=}")
