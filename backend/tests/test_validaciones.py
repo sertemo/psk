@@ -11,7 +11,7 @@ from backend.validaciones import (verificar_existen_todas_variables_plantilla,
                                 verificar_contraseña,
                                 hashear_contraseña,
                                 crear_contraseña_valida
-                                  )
+                                )
 
 import backend.template_manager as tm
 
