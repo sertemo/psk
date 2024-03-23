@@ -8,7 +8,6 @@ import string
 from passlib.context import CryptContext
 import random
 import validators
-import numpy as np
 from cryptography.fernet import Fernet
 
 from icecream import ic
