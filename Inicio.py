@@ -15,6 +15,7 @@ from pathlib import Path
 import time
 from datetime import datetime
 import pytz
+import toml
 
 import pandas as pd
 
@@ -31,8 +32,10 @@ from backend import (dataloader as dl,
 #ruta_backend = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend'))
 #sys.path.append(ruta_backend)
 
+pyproject_file = toml.load('pyproject.toml')
+
 ## Constantes
-version_app = '1.0'
+version_app = pyproject_file['tool']['poetry']['version']
 NUM_INTENTOS = 4
 NOMBRE_ADMIN = 'Sergio Tejedor'
 USUARIO_ADMIN = 'sertemo'
@@ -68,7 +71,7 @@ configuracion_plantilla = {
 
 ## Configuración de la app
 st.set_page_config(
-    page_title=f"pSK mailing {version_app}·BETA",
+    page_title=f"pSK mailing v{version_app}",
     page_icon="📮",
     layout="wide",
     initial_sidebar_state="auto",
@@ -498,11 +501,11 @@ def registrarse(gestor_db:db.UserDBHandler, gestor_email_admin:em.EmailManager) 
         col1, col2 = st.columns(2)
         with col1:            
             user = st.text_input("Usuario",
-                                 help="El usuario no puede contener espacios en blanco")
+                                help="El usuario no puede contener espacios en blanco")
             password_reg = st.text_input("Contraseña", 
-                                         type="password", 
-                                         help=f"La contraseña debe de tener al menos {val.PASS_LEN} caracteres totales, {val.PASS_NUMS} números, {val.PASS_SPECIAL} caracteres especiales y {val.PASS_CHAR} letras.",
-                                         on_change=None) 
+                                        type="password", 
+                                        help=f"La contraseña debe de tener al menos {val.PASS_LEN} caracteres totales, {val.PASS_NUMS} números, {val.PASS_SPECIAL} caracteres especiales y {val.PASS_CHAR} letras.",
+                                        on_change=None) 
             email = st.text_input("Email")         
 
         with col2:
@@ -1289,9 +1292,9 @@ def personalizar(
                         logging.info(f"Traducción del nombre de sector {nombre_sector} correcta en francés e inglés.")
                     except Exception as exc:
                         st.error(f"""
-                                 Se ha producido el siguiente error al traducir: {exc}.\n
-                                 Inténtalo más tarde.
-                                 """)
+                                Se ha producido el siguiente error al traducir: {exc}.\n
+                                Inténtalo más tarde.
+                                """)
                         logging.error(f"Error al traducir el nombre de sector {nombre_sector}. Motivo: {exc}.")
                         time.sleep(1)
                         st.rerun()
@@ -1460,7 +1463,7 @@ def personalizar(
             sector_formateo=sector_formateo,
             gestor_db_plantilla=gestor_db_plantilla_prosp
         )
-           
+
     with col2:
         mostrar_interfaz_plantillas(
             tipo_plantilla="plantillas_react",
@@ -1522,8 +1525,8 @@ def main():
             BETA
         </span>
         """
-        texto(f"""📮 pSK mailing {version_app} {beta_sign}""",
-            font_size=25, 
+        texto(f"""📮 pSK mailing v{version_app}""",
+            font_size=20, 
             color='#005092', 
             formato='b')
 
@@ -1549,7 +1552,7 @@ def main():
             menu_icon="gear",
             )
         ## Firma
-        st.caption("~ Done by STM 2023")
+        st.caption("STM 2023")
         
     ## Iniciar variables de sesión
     usuario_sesion = st.session_state.get("parametros_comercial_sesion",{}).get("nombre_completo", "")
